@@ -1,6 +1,7 @@
 package miau.dona;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -17,8 +18,8 @@ public class Main {
             if (Objects.equals(day, "Wednesday")) {
                 precio = 5;
 
-            } else if {
-
-        }
+            } else if (Objects.equals(day, "Thursday")) {
+                // TODO
+            }
     }
 }
