@@ -10,16 +10,34 @@ public class Main {
             double precio;
             int people;
             String day;
+            double total;
             boolean isStudent;
+            isStudent = false;
 
+            System.out.println("Dia");
             Scanner scanner = new Scanner(System.in);
             day = scanner.nextLine();
+
+            System.out.println("N personas");
+            people = scanner.nextInt();
 
             if (Objects.equals(day, "Wednesday")) {
                 precio = 5;
 
             } else if (Objects.equals(day, "Thursday")) {
-                // TODO
+                precio = 11;
+                people = people / 2;
+                System.out.println(people);
+            } else {
+                precio = 8;
             }
+            if (isStudent) {
+                precio = precio * 0.90;
+            }
+
+            total = people * precio;
+
+        System.out.println("El total es " + total);
+
     }
 }
