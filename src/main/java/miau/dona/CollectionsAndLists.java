@@ -3,7 +3,7 @@ package miau.dona;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class collectionsAndLists {
+public class CollectionsAndLists {
 
     public static void main(String[] args) {
         ArrayList<String> cars = new ArrayList<String>();
