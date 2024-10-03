@@ -1,4 +1,4 @@
-package miau.dona;
+package miau.dona.ejerciciosclase;
 
 import miau.dona.utils.UtilsJava;
 

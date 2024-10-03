@@ -1,8 +1,7 @@
-package miau.dona;
+package miau.dona.ejerciciosclase;
 
 import java.util.Objects;
 import java.util.Scanner;
-import miau.dona.utils.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

@@ -1,5 +1,4 @@
-package miau.dona;
-import miau.dona.utils.*;
+package miau.dona.ejerciciosclase;
 
 import java.util.Scanner;
 

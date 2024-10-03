@@ -1,7 +1,5 @@
-package miau.dona;
+package miau.dona.ejerciciosclase;
 import miau.dona.utils.*;
-
-import java.util.Scanner;
 
 /*1º.- Realiza un ejercicio que pida números al usuario. El programa debe detenerse cuando el
 usuario introduzca el número 0 (cero), que no debe tenerse en cuenta para ninguna

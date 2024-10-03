@@ -24,4 +24,13 @@ public class UtilsJava {
         return scanner.nextFloat();
     }
 
+    public static double pedirNumerosParaRandom() {
+        Scanner scanner = new Scanner(System.in);
+
+        int min = pedirInt("Dime el número mínimo");
+        int max = pedirInt("Dime el número máximo");
+        double numRandom = Math.random() * (max - min) + min ;
+        return numRandom;
+    }
+
 }

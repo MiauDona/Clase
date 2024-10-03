@@ -1,4 +1,4 @@
-package miau.dona;
+package miau.dona.leetcode;
 
 /*
  * P   A   H   N
@@ -37,9 +37,6 @@ Output: "A"
  *
  *
 */
-
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class LeetCodeProblema1 {
     class Solution {
