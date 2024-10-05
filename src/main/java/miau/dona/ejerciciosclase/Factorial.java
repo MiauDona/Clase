@@ -6,10 +6,9 @@ public class Factorial {
     public static void main(String[] args) {
         // factorial();
     }
-    public static void factorial() {
-        int numFactorial = UtilsJava.pedirInt("Introduce un numero para caluclar su factorial");
+    public static void factorial(int introducirNumero) {
         int resultado = 1;
-        for (int i = numFactorial; i > 1; i--) {
+        for (int i = introducirNumero; i > 1; i--) {
             resultado = resultado * i;
 
             System.out.println(resultado);
@@ -28,7 +27,7 @@ public class Factorial {
                     esPrimo = false;
                 } else contador++;
             }
-            System.out.println("");
+            System.out.println();
 
 
         }

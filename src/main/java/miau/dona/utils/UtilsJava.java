@@ -1,8 +1,12 @@
 package miau.dona.utils;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class UtilsJava {
+    // Crea un random
+    public static final Random RANDOM = new Random();
+
     public static String pedir(String mensaje) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(mensaje);
@@ -21,11 +25,12 @@ public class UtilsJava {
         return Float.parseFloat(pedir(mensaje));
     }
 
-    public static double pedirNumerosParaRandom() {
+    public static int pedirNumerosParaRandom() {
         int min = pedirInt("Vamos a hacer un número aleatorio en un rango entre 2 numeros. Dime el número mínimo");
         int max = pedirInt("Dime el número máximo");
 
-        return Math.random() * (max - min) + min;
+        // return Math.random() * (max - min) + min;
+        return RANDOM.nextInt(min, max + 1);
     }
 
     public static boolean esNumeroPrimo(int numeroIntroducido) {
