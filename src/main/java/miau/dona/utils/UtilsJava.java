@@ -27,7 +27,7 @@ public class UtilsJava {
     public static double pedirNumerosParaRandom() {
         Scanner scanner = new Scanner(System.in);
 
-        int min = pedirInt("Dime el número mínimo");
+        int min = pedirInt("Vamos a hacer un número aleatorio en un rango entre 2 numeros. Dime el número mínimo");
         int max = pedirInt("Dime el número máximo");
         double numRandom = Math.random() * (max - min) + min ;
         return numRandom;
