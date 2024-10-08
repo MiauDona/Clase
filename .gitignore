@@ -15,10 +15,10 @@ gradle/wrapper/gradle-wrapper.jar
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-.idea/**
-build.gradle.kts
-gradlew.bat
-settings.gradle.kts
+/.idea/**
+/build.gradle.kts
+/gradlew.bat
+/settings.gradle.kts
 
 
 
