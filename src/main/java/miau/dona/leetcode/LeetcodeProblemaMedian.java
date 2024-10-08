@@ -12,6 +12,7 @@ public class LeetcodeProblemaMedian {
         System.out.println(num);
     }
 
+    // Encuentra el punto medio del array y si son 2 hace la media
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] numeros = new int[nums1.length + nums2.length];
         System.arraycopy(nums1, 0, numeros, 0, nums1.length);
