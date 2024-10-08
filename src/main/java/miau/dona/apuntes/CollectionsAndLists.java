@@ -1,4 +1,4 @@
-package miau.dona.leetcode;
+package miau.dona.apuntes;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +6,7 @@ import java.util.Collections;
 public class CollectionsAndLists {
 
     public static void main(String[] args) {
-        ArrayList<String> cars = new ArrayList<String>();
+        ArrayList<String> cars = new ArrayList<>();
         cars.add("Volvo");
         cars.add("BMW");
         cars.add("Ford");

@@ -1,7 +1,6 @@
-package miau.dona;
+package miau.dona.apuntes;
 
 import miau.dona.utils.UtilsJava;
-import java.util.Random;
 
 public class Apuntes {
     public static void main(String[] args) {
