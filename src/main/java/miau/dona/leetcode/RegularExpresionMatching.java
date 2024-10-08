@@ -1,26 +1,44 @@
 package miau.dona.leetcode;
 
+import java.util.Arrays;
+
 public class RegularExpresionMatching {
     public static void main(String[] args) {
+        String miString = "aa";
+        String miPatron = "a*";
+        System.out.println(isMatch(miString, miPatron));
 
+        // TODO Falta hacer que cuando miString sea mayor que miPatron pero miPatron tenga * al final, sea todo lo anterior true
     }
 
-    public boolean isMatch(String s, String p) {
+    public static boolean isMatch(String s, String p) {
         boolean coinciden = false;
-        for (char cp : p.toCharArray()) {
-            if (cp == '*' || cp == '.') {
-                coinciden = true;
-            } else {
-                for (char cs : s.toCharArray()) {
-                    if (cs == cp) {
-                        // Comprobar si cs es igual que cp
+        boolean[] booleans = new boolean[p.length()];
+        char[] pArray = p.toCharArray();
+        char[] sArray = s.toCharArray();
+
+        if (pArray.length == sArray.length) {
+            for (int i = 0; i < pArray.length; i++) {
+                if (pArray[i] == sArray[i] || pArray[i] == '.') {
+                    booleans[i] = true;
+                } else if (pArray[i] == '*') {
+                    for (int j = i; j >= 0; j--) {
+                        booleans[j] = true;
                     }
+                } else {
+                    booleans[i] = false;
                 }
             }
-
+            for (boolean b : booleans) {
+                if (b) {
+                    coinciden = true;
+                } else {
+                    coinciden = false;
+                    break;
+                }
+            }
+            System.out.println(Arrays.toString(booleans));
         }
-
-
 
         return coinciden;
     }
