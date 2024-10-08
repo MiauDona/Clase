@@ -5,10 +5,7 @@ gradle/wrapper/gradle-wrapper.jar
 !**/src/test/**/build/
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea
 *.iws
 *.iml
 *.ipr
@@ -19,9 +16,7 @@ out/
 /build.gradle.kts
 /gradlew.bat
 /settings.gradle.kts
-
-
-
+# Delete unnecessary files (I tried to load your project and it crashed my IntelliJ)
 ### Eclipse ###
 .apt_generated
 .classpath
