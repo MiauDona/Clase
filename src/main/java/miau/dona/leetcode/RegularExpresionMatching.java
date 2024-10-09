@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class RegularExpresionMatching {
     public static void main(String[] args) {
-        String miString = "aa";
-        String miPatron = "a*";
+        String miString = "aaaaaaaaa";
+        String miPatron = "aaaae*";
         System.out.println(isMatch(miString, miPatron));
 
         // TODO Falta hacer que cuando miString sea mayor que miPatron pero miPatron tenga * al final, sea todo lo anterior true
@@ -16,6 +16,12 @@ public class RegularExpresionMatching {
         boolean[] booleans = new boolean[p.length()];
         char[] pArray = p.toCharArray();
         char[] sArray = s.toCharArray();
+
+
+        // TODO: Falta hacer que si una letra de pArray es distinta de sArray que sea false
+        if (pArray[pArray.length-1] == '*' && sArray.length >= pArray.length) {
+            return true;
+        }
 
         if (pArray.length == sArray.length) {
             for (int i = 0; i < pArray.length; i++) {
