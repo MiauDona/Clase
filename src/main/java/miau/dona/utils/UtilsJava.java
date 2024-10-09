@@ -46,4 +46,28 @@ public class UtilsJava {
 
         return esPrimo;
     }
+
+    public static void mostrarArrayInts(int[] array) {
+        for (int valor : array) {
+            System.out.print(valor + " ");
+        }
+    }
+
+    public static void mostrarArrayStrings(String[] array) {
+        for (String valor : array) {
+            System.out.print(valor + " ");
+        }
+    }
+
+    public static void mostrarArrayBooleans(boolean[] array) {
+        for (boolean valor : array) {
+            System.out.print(valor + " ");
+        }
+    }
+
+    public static void mostrarArrayCharDeString(String string) {
+        for (char valor : string.toCharArray()) {
+            System.out.print(valor + " ");
+        }
+    }
 }

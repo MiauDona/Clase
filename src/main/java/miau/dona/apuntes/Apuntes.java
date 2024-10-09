@@ -2,6 +2,8 @@ package miau.dona.apuntes;
 
 import miau.dona.utils.UtilsJava;
 
+import java.util.Random;
+
 public class Apuntes {
     public static void main(String[] args) {
         // arrays();
@@ -22,6 +24,8 @@ public class Apuntes {
         for (char c : array.toCharArray()) {
             System.out.println(c);
         }
+
+
 
         int tamano = 10;
         int[] intArray = new int[tamano];
