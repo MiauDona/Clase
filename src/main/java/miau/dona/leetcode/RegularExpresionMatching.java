@@ -7,8 +7,6 @@ public class RegularExpresionMatching {
         String miString = "aaaaaa";
         String miPatron = "*aaaa.";
         System.out.println(isMatch(miString, miPatron));
-
-        // TODO Falta hacer que cuando miString sea mayor que miPatron pero miPatron tenga * al final, sea todo lo anterior true
     }
 
     public static boolean isMatch(String s, String p) {
@@ -16,8 +14,6 @@ public class RegularExpresionMatching {
 
         char[] pArray = p.toCharArray();
         char[] sArray = s.toCharArray();
-
-        // TODO: Falta hacer que si una letra de pArray es distinta de sArray que sea false
 
         // Si la String es mas pequeña que el patron
         if (sArray.length < pArray.length) {
