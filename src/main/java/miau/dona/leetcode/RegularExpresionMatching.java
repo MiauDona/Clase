@@ -1,83 +1,90 @@
 package miau.dona.leetcode;
 
+import jdk.jshell.execution.Util;
 import miau.dona.utils.UtilsJava;
 
 public class RegularExpresionMatching {
     public static void main(String[] args) {
-        String miString = "aaaaaa";
-        String miPatron = "*aaaa.";
+        String miString = "cdfaafdasb";
+        String miPatron = "c*a*b";
         System.out.println(isMatch(miString, miPatron));
     }
 
+    // TODO: Si mi patron tiene letras distintas pero coincide de todas formas deberia de devolver true
+    // Por ejemplo c*a*b es true.
+
     public static boolean isMatch(String s, String p) {
         boolean coincide = false;
+        boolean[] pBooleans = new boolean[p.length()] ;
 
         char[] pArray = p.toCharArray();
         char[] sArray = s.toCharArray();
 
-        // Si la String es mas pequeña que el patron
-        if (sArray.length < pArray.length) {
-            boolean[] booleans = new boolean[s.length()];
-            for (int i = 0; i < sArray.length; i++) {
-                if (sArray[i] == pArray[i] || pArray[i] == '.' || pArray[i] == '*') {
-                    booleans[i] = true;
-                    coincide = true;
-                } else {
-                    return false;
-                }
-            }
+        // Recorrer pArray
+        // Si el pArray no tiene *, conserva el orden
+        int contador = contarAsteriscos(pArray);
 
-            for (boolean b : booleans) {
-                if (b) {
-                    coincide = true;
-                }
-            }
+        // Si el pArray tiene *, seguir el orden hasta *, despues de eso, debe de contener el siguiente patron
+        // Si tiene varios, debe de contener el patron entre los *, y si acaba con letra, la ultima letra debe de ser la letra
 
-            for (int i = sArray.length; i < pArray.length; i++) {
-                if (pArray[i] != '*') {
-                    return false;
-                } else {
-                    coincide = true;
-                }
-            }
-        }
+        if (contador > 0) {
+            int[] listaIndiceAsteriscos = new int[contador];
+            int posicionAsteriscos=0;
 
-        // Si la String es mas grande que el patron
-        // Este funciona
-        if (pArray[pArray.length-1] == '*' && sArray.length > pArray.length) {
+            int[] listaIndiceLetras = new int[pArray.length-contador];
+            int posicionLetras=0;
+
             for (int i = 0; i < pArray.length; i++) {
-                if (pArray[i] == sArray[i] || pArray[i] == '*' || pArray[i] == '.') {
-                    coincide = true;
+                // Devuelve las posiciones donde hay un *
+                if (pArray[i] == '*') {
+                    listaIndiceAsteriscos[posicionAsteriscos] = i;
+                    posicionAsteriscos++;
                 } else {
-                    return false;
-                }
-                if (i <= sArray.length-1 && (pArray[i] == '*')) {
-                    coincide = true;
-                } else {
-                    coincide = false;
+                    listaIndiceLetras[posicionLetras] = i;
+                    posicionLetras++;
                 }
             }
+            UtilsJava.mostrarArrayInts(listaIndiceAsteriscos);
+            System.out.println();
+            UtilsJava.mostrarArrayInts(listaIndiceLetras);
+            System.out.println();
+
         }
 
-        // Si los 2 son iguales
-        if (pArray.length == sArray.length) {
-            boolean[] booleans = new boolean[p.length()];
-            for (int i = 0; i < pArray.length; i++) {
-
-                if (pArray[i] == sArray[i] || pArray[i] == '.' || pArray[i] == '*') {
-                    booleans[i] = true;
-                } else {
-                    booleans[i] = false;
-                }
-            }
-            for (boolean b : booleans) {
-                if (b) {
-                    return true;
-                }
-            }
-        }
-        return coincide;
+        return true;
     }
+
+    public static int contarAsteriscos(char[] patron) {
+        int contador=0;
+
+        for (int i = 0; i < patron.length; i++) {
+            contador = patron[i] == '*' ? contador+1 : contador;
+        }
+        return contador;
+    }
+    public static boolean comprobarArrayBooleanTrue(boolean[] booleans) {
+        for (boolean b : booleans) {
+            if (!b) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Comprueba si la letra entre el patron y la string son iguales
+     * @param patternChar pArray[i]
+     * @param stringChar sArray[i]
+     * @return Devuelve un boolean dependiendo de si son iguales o no
+     */
+    public static boolean comprobarSiLetraEsIgual(char patternChar, char stringChar) {
+            if (patternChar == stringChar ||patternChar == '*' || patternChar == '.') {
+                return true;
+            } else {
+                return false;
+            }
+    }
+
 
     /*
     Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:

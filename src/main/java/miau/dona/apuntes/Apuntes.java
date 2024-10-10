@@ -25,8 +25,6 @@ public class Apuntes {
             System.out.println(c);
         }
 
-
-
         int tamano = 10;
         int[] intArray = new int[tamano];
 
