@@ -1,5 +1,6 @@
 package miau.dona.ejerciciosclase;
 
+import jdk.jshell.execution.Util;
 import miau.dona.utils.UtilsJava;
 
 import static miau.dona.utils.UtilsJava.RANDOM;
@@ -22,15 +23,17 @@ del méto-do 'public static void desplazaCiclicoDerecha (int a[])'.
         }
 
         UtilsJava.mostrarArrayInts(array);
-        int aux;
-
-        for (int i = 0; i < array.length ; i++) {
-            aux = array[i];
-            array[i+1] = array[i];
-        }
+        desplazaCiclicoDerecha(array);
     }
 
     public static void desplazaCiclicoDerecha (int a[]) {
+        int[] arrayAux = new int[a.length];
+        arrayAux[0] = a[a.length-1];
 
+        for (int i = 1; i < a.length ; i++) {
+            arrayAux[i] = a[i-1];
+        }
+        System.out.println();
+        UtilsJava.mostrarArrayInts(arrayAux);
     }
 }
