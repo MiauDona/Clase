@@ -6,7 +6,7 @@ usuario introduzca el número 0 (cero), que no debe tenerse en cuenta para ningu
 operación aritmética, simplemente para salir de la aplicación. Cuando el programa haya
 terminado, se debe sacar en pantalla el valor de la suma y de la media de todos los
 números.*/
-public class ejerciciodificilfor {
+public class EjercicioDificilFor {
     public static void main(String[] args) {
     int numero;
     int suma = 0;

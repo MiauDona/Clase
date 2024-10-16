@@ -2,7 +2,7 @@ package miau.dona.ejerciciosclase;
 
 import java.util.Scanner;
 
-public class pruebaclase {
+public class PruebaClase {
     public static void main(String[] args) {
         /* 1º.- Realiza un programa que pida al usuario cuatro números enteros, y calcule la suma solo
 de aquellos números introducidos por el usuario, que sean mayores de 10. Es decir, que si el
