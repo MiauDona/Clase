@@ -117,4 +117,21 @@ public class UtilsJava {
         }
         return string.toCharArray();
     }
+
+    /**
+     * Crea un array con numeros aleatorios entre 2 números
+     * @param tamanio El tamaño del array (int)
+     * @param min El numero minimo para los aleatorios (int)
+     * @param max El numero maximo para los aleatorios (int)
+     * @return El array con los numeros aleatorios (int[])
+     */
+    public static int[] crearArrayIntsAleatoriosEntreNumeros(int tamanio, int min, int max) {
+        int[] array = new int[tamanio];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = RANDOM.nextInt(min,max+1);
+        }
+
+        return array;
+    }
 }

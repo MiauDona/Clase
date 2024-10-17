@@ -16,7 +16,6 @@ desplazaCiclicoDerecha (int a[], int posiciones)'
 public class BeginnerPlusCinco {
     public static void main(String[] args) {
         int[] array = new int[5];
-
         for (int i = 0; i < array.length; i++) {
             array[i] = RANDOM.nextInt(101);
         }
@@ -47,7 +46,6 @@ public class BeginnerPlusCinco {
 
     public static void desplazaCiclicoIzquierda(int[] a, int posiciones) {
         int[] arrayAux = new int[a.length];
-
         for (; posiciones > 0 ; posiciones--){
             arrayAux[arrayAux.length-1] = a[0];
             for (int i = 0; i < a.length-1 ; i++) {
