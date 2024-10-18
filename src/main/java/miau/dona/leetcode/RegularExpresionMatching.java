@@ -5,7 +5,7 @@ import miau.dona.utils.UtilsJava;
 
 public class RegularExpresionMatching {
     public static void main(String[] args) {
-        String miString = "cdfaafdasb";
+        String miString = "cdffdsb";
         String miPatron = "c*a*b";
         System.out.println(isMatch(miString, miPatron));
     }
@@ -44,10 +44,24 @@ public class RegularExpresionMatching {
                     posicionLetras++;
                 }
             }
+            System.out.println("Lista indice asteriscos");
             UtilsJava.mostrarArrayInts(listaIndiceAsteriscos);
             System.out.println();
+            System.out.println("Lista indice letras");
             UtilsJava.mostrarArrayInts(listaIndiceLetras);
             System.out.println();
+
+            for (int i = 0; i < listaIndiceAsteriscos.length; i++) {
+                for (int j = 0; j < listaIndiceAsteriscos[i]; j++) {
+                    if (listaIndiceAsteriscos[i] == '*') {
+                        break;
+                    } else {
+                        for (int k = 0; k < sArray.length; k++) {
+
+                        }
+                    }
+                }
+            }
 
         }
 
