@@ -53,6 +53,7 @@ public class UtilsJava {
         int min = pedirInt("Vamos a hacer un número aleatorio en un rango entre 2 numeros. Dime el número mínimo");
         int max = pedirInt("Dime el número máximo");
 
+        // Antigua formula
         // return Math.random() * (max - min) + min;
         return RANDOM.nextInt(min, max + 1);
     }
@@ -65,10 +66,12 @@ public class UtilsJava {
     public static boolean esNumeroPrimo(int numeroIntroducido) {
         boolean esPrimo = true;
 
+        if (numeroIntroducido == 0) {
+            return false;
+        }
         for (int i = numeroIntroducido-1; i > 1; i--) {
             if (numeroIntroducido % i == 0) {
                 esPrimo = false;
-                System.out.println("El número no es primo");
                 break;
             }
         }
