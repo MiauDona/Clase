@@ -1,6 +1,5 @@
 package miau.dona.tareas;
 
-import miau.dona.ejerciciosclase.Factorial;
 import miau.dona.utils.UtilsJava;
 
 public class EjerciciosDificil {

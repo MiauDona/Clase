@@ -4,8 +4,6 @@ import miau.dona.utils.UtilsJava;
 
 public class ejercicio4 {
     public static void main(String[] args) {
-
-        // Se
         int maxAleatorio = 30;
 
         // Se declara un  de 50 valores con numeros aleatorios del 1 al 30 y lo muestra
@@ -30,9 +28,7 @@ public class ejercicio4 {
                 mayor = vecesEncontrado[i];
                 System.out.println(miArray[i] + " se repite " + vecesEncontrado[i] + " veces");
             }
-
         }
-
     }
 
     // Metodo para contar cuantas veces sale un numero dentro de un array

@@ -1,6 +1,5 @@
-package miau.dona.ejerciciosclase;
+package miau.dona.ejerciciosclase.normales;
 
-import jdk.jshell.execution.Util;
 import miau.dona.utils.UtilsJava;
 
 import static miau.dona.utils.UtilsJava.RANDOM;

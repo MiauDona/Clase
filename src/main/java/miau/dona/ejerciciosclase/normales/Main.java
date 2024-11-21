@@ -1,4 +1,4 @@
-package miau.dona.ejerciciosclase;
+package miau.dona.ejerciciosclase.normales;
 
 import java.util.Objects;
 import java.util.Scanner;

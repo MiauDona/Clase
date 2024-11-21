@@ -1,4 +1,4 @@
-package miau.dona.ejerciciosclase;
+package miau.dona.ejerciciosclase.normales;
 import miau.dona.utils.*;
 
 /*1º.- Realiza un ejercicio que pida números al usuario. El programa debe detenerse cuando el

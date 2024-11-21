@@ -1,6 +1,4 @@
-package miau.dona.ejerciciosclase;
-
-import miau.dona.utils.UtilsJava;
+package miau.dona.ejerciciosclase.normales;
 
 public class EsPrimo {
     public static void main(String[] args) {
