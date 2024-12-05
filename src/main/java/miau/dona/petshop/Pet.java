@@ -1,4 +1,4 @@
-package miau.dona.ejerciciosclase.clases.petshop;
+package miau.dona.petshop;
 
 public abstract class Pet extends Animal {
     private int chipNumber;

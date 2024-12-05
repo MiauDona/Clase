@@ -137,4 +137,116 @@ public class UtilsJava {
 
         return array;
     }
+
+    /**
+     * Crea una matriz con números aleatorios entre 2 números
+     * @param filas Fila para acceder a la posición querida
+     * @param columnas Columna para acceder a la posición querida
+     * @param min El número mínimo para los aleatorios
+     * @param max El número máximo para los aleatorios
+     * @return La matriz con los valores aleatorios rellena
+     */
+    public static int[][] crearMatrizAleatoriosEntreNumeros(int filas, int columnas, int min, int max) {
+        int[][] matriz = new int[filas][columnas];
+        
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = RANDOM.nextInt(min,max+1);
+            }
+        }
+        
+        return matriz;
+    }
+
+    /**
+     * Muestra la matriz
+     * @param matriz matriz a mostrar
+     */
+    public static void mostrarMatriz(int[][] matriz) {
+        System.out.print("{" );
+        
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.println();
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+        }
+        
+        System.out.println("\n}");
+    }
+
+    /**
+     * Muestra la diagonal principal desde la esquina izquierda
+     * @param matriz matriz a mostrar
+     */
+    public static void mostrarMatrizDiagonalIzquierdaADerecha(int[][] matriz) {
+        for (int i = 0; i < matriz[0].length; i++) {
+            System.out.print(matriz[i][i] + " ");
+        }
+    }
+
+    /**
+     * Muestra la diagonal principal desde la esquina derecha
+     * @param matriz matriz a mostrar
+     */
+    public static void mostrarMatrizDiagonalDerechaAIzquierda(int[][] matriz) {
+        for (int i = 0; i < matriz[0].length; i++) {
+            System.out.print(matriz[i][matriz[i].length-1-i] + " "); //?? nose si funciona
+        }
+    }
+
+    /**
+     * Muestra la columna indicada
+     * @param matriz matriz de la que se va a mostrar la columna
+     * @param columna columna a mostrar
+     */
+    public static void mostrarMatrizColumna (int[][] matriz, int columna) {
+        for (int i = 0; i < matriz[0].length; i++) {
+            System.out.println(matriz[i][columna-1] + " ");
+        }
+    }
+
+    /**
+     * Muestra la fila que quieras de una matriz
+     * @param matriz matriz de la que se va a mostrar la columna
+     * @param fila fila a mostrar
+     */
+    public static void mostrarMatrizFila (int[][] matriz, int fila) {
+        for (int i = 0; i < matriz[fila-1].length; i++) {
+            System.out.println(matriz[fila-1][i] + " ");
+        }
+    }
+
+    /**
+     * Comprueba si algun valor de la matriz es nulo (o igual a 0)
+     * @param matriz Matriz a comprobar
+     * @return True si es dispersa, de lo contrario false
+     */
+    public static boolean comprobarMatrizDispersa(int[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (matriz[i][j] == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Rota la matriz 90º
+     * @param matriz Matriz a comprobar
+     * @return la matriz rotada
+     */
+    public static int[][] rotarMatrizValores(int matriz[][]) {
+        int[][] matrizRotada = new int[matriz[0].length][matriz.length];
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matrizRotada[j][i] = matriz[i][j];
+            }
+        }
+        
+        return matrizRotada;
+    }
 }

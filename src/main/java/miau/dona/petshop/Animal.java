@@ -1,6 +1,4 @@
-package miau.dona.ejerciciosclase.clases.petshop;
-
-import java.util.Objects;
+package miau.dona.petshop;
 
 public abstract class Animal {
     private char sex;
@@ -8,17 +6,18 @@ public abstract class Animal {
     private final int eanCode;
     private int price = 0;
     private String specie;
-    private int animalsSold = 0;
+    private String[] eats;
 
     public Animal(int eanCode, int ageDays, char sex, int price) {
         this.eanCode = eanCode;
         this.ageDays = ageDays;
-        this.sex = sex;
         this.price = price;
-    }
-    
-    public boolean canMate(Animal couple) {
-        return getSex() != couple.getSex() && Objects.equals(getSpecie(), couple.getSpecie());
+
+        if (sex == 'f' || sex == 'm') {
+            this.sex = sex;
+        } else {
+            this.sex = 'f';
+        }
     }
 
     public void setSpecie(String specie) {
@@ -51,5 +50,13 @@ public abstract class Animal {
 
     public int getPrice() {
         return price;
+    }
+    
+    public String[] getEats() {
+        return eats;
+    }
+    
+    public void setEats(String[] eats) {
+        this.eats = eats;
     }
 }
